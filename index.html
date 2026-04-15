@@ -136,16 +136,15 @@ footer {
 
 <section id="home" class="hero">
   <h2>Welcome to the Future</h2>
-  <p>A fully working futuristic website</p>
   <button onclick="launch()">Launch</button>
 </section>
 
 <section id="features">
   <h2>Features</h2>
   <div class="cards">
-    <div class="card">🚀 Fast</div>
-    <div class="card">⚡ Powerful</div>
-    <div class="card">🤖 Smart</div>
+    <div class="card">Fast</div>
+    <div class="card">Powerful</div>
+    <div class="card">Smart</div>
   </div>
 </section>
 
@@ -160,7 +159,7 @@ footer {
 
 <!-- Launch overlay -->
 <div id="launchScreen">
-  🚀 Launching...
+  Launching...
 </div>
 
 <script>
@@ -173,14 +172,14 @@ function goTo(id) {
 function launch() {
   const screen = document.getElementById("launchScreen");
   screen.style.display = "flex";
-  screen.innerHTML = "🚀 Launching...";
+  screen.innerHTML = "Launching...";
 
   setTimeout(() => {
-    screen.innerHTML = "🌌 Entering Future...";
+    screen.innerHTML = "Entering Future...";
   }, 1200);
 
   setTimeout(() => {
-    screen.innerHTML = "⚡ System Online";
+    screen.innerHTML = "System Online";
   }, 2200);
 
   setTimeout(() => {
