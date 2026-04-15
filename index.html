@@ -141,11 +141,11 @@ footer {
 
 <section id="features">
   <h2>Features</h2>
-  <div class="cards">
-    <div class="card">Fast</div>
-    <div class="card">Powerful</div>
-    <div class="card">Smart</div>
-  </div>
+<div class="cards">
+  <div class="card" onclick="feature('fast')">Fast</div>
+  <div class="card" onclick="feature('powerful')">Powerful</div>
+  <div class="card" onclick="feature('smart')">Smart</div>
+</div>
 </section>
 
 <section id="contact">
@@ -186,6 +186,26 @@ function launch() {
     screen.style.display = "none";
     goTo("features");
   }, 3200);
+}
+  function feature(type) {
+  const screen = document.getElementById("launchScreen");
+  screen.style.display = "flex";
+
+  if (type === "fast") {
+    screen.innerHTML = "FAST MODE ACTIVATED";
+  }
+
+  if (type === "powerful") {
+    screen.innerHTML = "POWER SYSTEM ONLINE";
+  }
+
+  if (type === "smart") {
+    screen.innerHTML = "AI MODULE CONNECTED";
+  }
+
+  setTimeout(() => {
+    screen.style.display = "none";
+  }, 2000);
 }
 </script>
 
