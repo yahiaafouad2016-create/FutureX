@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutureX</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Background glow */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00f0ff, transparent 40%);
+  animation: moveBg 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-25%, -25%); }
+  100% { transform: translate(0,0); }
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav h1 {
+  color: #00f0ff;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero button {
+  padding: 15px 30px;
+  background: #00f0ff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>FutureX</h1>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Welcome to the Future</h2>
+  <p>Your futuristic website starts here</p>
+  <button onclick="launch()">Launch</button>
+</section>
+
+<section class="cards">
+  <div class="card">🚀 Fast</div>
+  <div class="card">⚡ Powerful</div>
+  <div class="card">🤖 Smart</div>
+</section>
+
+<footer>
+  © 2026 FutureX
+</footer>
+
+<script>
+function launch() {
+  alert("🚀 Launching into the future...");
+}
+</script>
+
+</body>
+</html>
