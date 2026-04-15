@@ -155,20 +155,29 @@ Launching...
 
 <script>
 function goTo(section) {
-  document.getElementById(section).scrollIntoView();
+  document.getElementById(section).scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
 function launch() {
   let screen = document.getElementById("launchScreen");
   screen.style.display = "flex";
 
+  screen.innerHTML = "Launching...";
+  
   setTimeout(() => {
     screen.innerHTML = "Entering the Future...";
-  }, 1500);
+  }, 1200);
+
+  setTimeout(() => {
+    screen.innerHTML = "Access Granted";
+  }, 2200);
 
   setTimeout(() => {
     screen.style.display = "none";
-  }, 3000);
+    goTo("features"); // 🔥 THIS is the important part
+  }, 3200);
 }
 </script>
 
